@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ADN: Explicación y Mini-juego interactivo</title>
+
+  <!-- Archivo CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>ADN — Explicación clara y juego interactivo</h1>
+        <div class="lead">Bloques listos para usar en tu web. Al final hay una sección interactiva para practicar.</div>
+      </div>
+
+      <!-- Imagen ADN -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/DNA_simple2.svg/320px-DNA_simple2.svg.png" 
+           alt="Ilustración ADN" 
+           style="height:120px; filter:drop-shadow(0 0 6px #8be)" />
+    </header>
+
+    <nav>
+      <a href="#que-es-adn">¿Qué es el ADN?</a>
+      <a href="#genes">Gen</a>
+      <a href="#replicacion">Replicación</a>
+      <a href="#transcripcion">Transcripción</a>
+      <a href="#traduccion">Traducción</a>
+      <a href="#glosario">Glosario</a>
+      <a href="#juego">Juego / Práctica</a>
+    </nav>
+
+    <main>
+
+      <!-- SECCIÓN ADN -->
+      <section id="que-es-adn" class="card">
+        <h2>¿Qué es el ADN?</h2>
+        <img class="sec-img" 
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/DNA_simple2.svg/180px-DNA_simple2.svg.png"
+          alt="Ilustración ADN">
+        <p>El ADN (ácido desoxirribonucleico) es la molécula que contiene la información genética de todos los seres vivos...</p>
+      </section>
+
+      <!-- GEN -->
+      <section id="genes" class="card">
+        <h2>¿Qué es un gen?</h2>
+        <p>Un gen es un segmento específico del ADN que contiene la información necesaria para producir una proteína...</p>
+      </section>
+
+      <!-- REPLICACIÓN -->
+      <section id="replicacion" class="card">
+        <h2>Replicación del ADN (ADN → ADN)</h2>
+        <p>La replicación del ADN es el proceso mediante el cual la célula crea una copia idéntica...</p>
+      </section>
+
+      <!-- TRANSCRIPCIÓN -->
+      <section id="transcripcion" class="card">
+        <h2>¿Qué es la transcripción? (ADN → ARN)</h2>
+        <p>La transcripción es el proceso donde la célula copia la información contenida en un gen...</p>
+      </section>
+
+      <!-- TRADUCCIÓN -->
+      <section id="traduccion" class="card">
+        <h2>Traducción genética (ARN → proteína)</h2>
+        <p>La traducción es el proceso mediante el cual el ribosoma lee la información...</p>
+      </section>
+
+      <!-- RESUMEN -->
+      <section id="resumen" class="card">
+        <h2>Del ADN a la proteína: resumen</h2>
+        <ol>
+          <li><strong>Replicación</strong></li>
+          <li><strong>Transcripción</strong></li>
+          <li><strong>Traducción</strong></li>
+        </ol>
+      </section>
+
+      <!-- GLOSARIO -->
+      <section id="glosario" class="card glossary">
+        <h2>Glosario breve</h2>
+        <ul>
+          <li>ADN — molécula que almacena la información genética</li>
+          <li>Gen — segmento de ADN...</li>
+          <li>Codón — grupo de tres bases...</li>
+        </ul>
+      </section>
+
+      <!-- JUEGO -->
+      <section id="juego" class="card">
+        <h2>Juego interactivo: Transcribe y Traduce</h2>
+        <p>Escribe una secuencia corta de ADN...</p>
+
+        <div class="game">
+          
+          <!-- Panel izquierdo -->
+          <div>
+            <label><strong>Secuencia de ADN:</strong></label>
+            <input id="dnaInput" placeholder="Ej: ATGGCC..." />
+
+            <div class="controls">
+              <button id="runBtn">Procesar</button>
+              <button id="clearBtn" class="secondary">Limpiar</button>
+            </div>
+
+            <div>
+              <strong>Salida:</strong>
+              <div>
+                <small>Hebra complementaria:</small>
+                <div id="repOutput" class="code-output"></div>
+
+                <small>ARNm:</small>
+                <div id="rnaOutput" class="code-output"></div>
+
+                <small>Traducción:</small>
+                <div id="aaOutput" class="code-output"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel derecho: Quiz -->
+          <aside>
+            <div class="quiz-box">
+              <h3>Mini-quiz</h3>
+              <div id="quiz"></div>
+            </div>
+          </aside>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <small>Contenido educativo — editable libremente para tus clases.</small>
+    </footer>
+  </div>
+
+  <!-- Archivo JS externo -->
+  <script src="script.js"></script>
+
+</body>
+</html>
+
